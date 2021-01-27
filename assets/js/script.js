@@ -36,7 +36,7 @@ let taggedTemplate = _e => {
 question1TL.addEventListener('click', templateLiterals)
 question1TT.addEventListener('click', taggedTemplate)
 
-let explain = () => {
+let explain2 = () => {
     let answer = `First-class functions => when functions in that language are treated like any other variable. \n
                     For example let somefunction = () => {do sth}
                     We can pass somefunction as a parameter or it maybe returned from a function`
@@ -58,12 +58,40 @@ let returningFunction = (parameter) => {
     alert(x);
 }
 
-question2FCF.addEventListener('click', explain)
+question2FCF.addEventListener('click', explain2)
 question2PFA.addEventListener('click', function () {
     passingArgument(getName)
 }
 )
 question2FRF.addEventListener('click', function(){returningFunction(5)})
 
-question3D.addEventListener('click', )
-question3E.addEventListener('click', )
+let explain3 = () => {
+    let answer = `<h6>Functions can access global variables, but local (blocked) variables cannot be accessed in a function.
+                    Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.<h6>`
+                    answer3.innerHTML = answer
+}
+let LetCounter = 0
+var VarCounter = 0
+let closures = () => {
+    VarCounter += 54
+    let LetCounter = 7
+    LetCounter++
+    console.log(LetCounter)
+}
+function add() {
+    var counter = 0;
+    counter += 1;
+    return counter;
+  }
+  
+question3D.addEventListener('click', function(){
+    console.log(LetCounter)
+    console.log(VarCounter)
+    closures()
+    console.log(LetCounter)
+    console.log(VarCounter)
+    add()
+    console.log(add())
+})
+question3E.addEventListener('click', explain3)
+
