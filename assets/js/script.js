@@ -11,6 +11,22 @@ let answer3 = document.getElementById('answer3')
 let question3E = document.getElementById("check3E")
 let question3D = document.getElementById("check3D")
 
+let answer4 = document.getElementById('answer4')
+let question4E = document.getElementById("check4E")
+let question4D = document.getElementById("check4D")
+
+let answer5 = document.getElementById('answer5')
+let question5E = document.getElementById("check5E")
+let question5D = document.getElementById("check5D")
+
+let answer6 = document.getElementById('answer6')
+let question6E = document.getElementById("check6E")
+let question6D = document.getElementById("check6D")
+
+let answer7 = document.getElementById('answer7')
+let question7E = document.getElementById("check7E")
+let question7D = document.getElementById("check7D")
+
 let templateLiterals = _e => {
     let answer = prompt("What comes after hello?")
     let res = `Answer: ${!answer ? 'you didn\'t enter' :
@@ -85,6 +101,9 @@ function add() {
   }
   
 question3D.addEventListener('click', function(){
+    let answer = `<h6>Refer to console<h6>`
+    answer3.innerHTML = answer
+
     console.log(LetCounter)
     console.log(VarCounter)
     closures()
