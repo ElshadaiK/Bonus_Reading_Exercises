@@ -114,3 +114,43 @@ question3D.addEventListener('click', function(){
 })
 question3E.addEventListener('click', explain3)
 
+
+let explain4 = () => {
+}
+question4E.addEventListener('click', explain4)
+
+
+let explain5 = () => {
+}
+question5E.addEventListener('click', explain5)
+
+
+let explain6 = () => {
+}
+question6E.addEventListener('click', explain6)
+
+
+let explain7 = () => {
+}
+question7E.addEventListener('click', explain7)
+
+
+
+let demo4 = () => {
+}
+question4E.addEventListener('click', demo4)
+
+
+let demo5 = () => {
+}
+question5E.addEventListener('click', demo5)
+
+
+let demo6 = () => {
+}
+question6E.addEventListener('click', demo6)
+
+
+let demo7 = () => {
+}
+question7E.addEventListener('click', demo7)
