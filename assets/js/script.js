@@ -134,7 +134,11 @@ question5E.addEventListener('click', explain5)
 
 
 let explain6 = () => {
-    let answer = `<h6><h6>`
+    let answer = `<h6>Iterator is an object which defines a sequence and potentially a return value upon its termination.
+    Once created, an iterator object can be iterated explicitly by repeatedly calling next().
+    <br>
+    When called, generator functions do not initially execute their code. Instead, they return a special type of iterator, called a Generator. When a value is consumed by calling the generator's next method, the Generator function executes until it encounters the yield keyword.
+    <h6>`
     answer6.innerHTML = answer
 }
 question6E.addEventListener('click', explain6)
@@ -178,10 +182,40 @@ let demo5 = () => {
 }
 question5D.addEventListener('click', demo5)
 
+function iterators() {
+    console.log("iterators")
+    const numbers = [1, 3, 4];
+    
+    console.log(numbers)
 
-let demo6 = () => {
+    const iterator = numbers[Symbol.iterator]();
+
+    console.log(iterator.next()); // => { value: 1, done: false }
+    console.log(iterator.next()); // => { value: 2, done: false }
+    console.log(iterator.next()); // => { value: 3, done: false }
+    console.log(iterator.next()); // => { value: undefined, done: true }
 }
-question6E.addEventListener('click', demo6)
+function* yieldingGenerator() {
+    yield 1;
+    yield 2;
+    yield 3;
+}
+function generators() {
+    console.log("Generators")
+    const gen = yieldingGenerator()
+    console.log(gen)
+
+    console.log(gen.next()); // => { value: 1, done: false }
+    console.log(gen.next()); // => { value: 2, done: false }
+    console.log(gen.next()); // => { value: 3, done: false }
+    console.log(gen.next()); // => { value: undefined, done: true }
+}
+let demo6 = () => {
+    alert("Refer to console")
+    iterators()
+    generators()
+}
+question6D.addEventListener('click', demo6)
 
 
 let demo7 = () => {
