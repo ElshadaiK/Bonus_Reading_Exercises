@@ -1,3 +1,4 @@
+import y from './exportDemo.js'
 let question1TL = document.getElementById("check1TL")
 let question1TT = document.getElementById("check1TT")
 let answer1TT = document.getElementById("answer1")
@@ -125,7 +126,8 @@ question4E.addEventListener('click', explain4)
 
 
 let explain5 = () => {
-    let answer = `<h6><h6>`
+    let answer = `<h6>We can only have one default export per module.
+    Default export can be imported with any name<h6>`
     answer5.innerHTML = answer
 }
 question5E.addEventListener('click', explain5)
@@ -172,8 +174,9 @@ question4D.addEventListener('click', demo4)
 
 
 let demo5 = () => {
+    alert(y)
 }
-question5E.addEventListener('click', demo5)
+question5D.addEventListener('click', demo5)
 
 
 let demo6 = () => {
