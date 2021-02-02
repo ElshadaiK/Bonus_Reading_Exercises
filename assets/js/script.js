@@ -145,7 +145,9 @@ question6E.addEventListener('click', explain6)
 
 
 let explain7 = () => {
-    let answer = `<h6><h6>`
+    let answer = `<h6>Map is a collection of keyed data items, just like an Object. But the main difference is that Map allows keys of any type.
+    <br>
+    A Set is a special type collection – “set of values” (without keys), where each value may occur only once.<h6>`
     answer7.innerHTML = answer
 }
 question7E.addEventListener('click', explain7)
@@ -185,7 +187,7 @@ question5D.addEventListener('click', demo5)
 function iterators() {
     console.log("iterators")
     const numbers = [1, 3, 4];
-    
+
     console.log(numbers)
 
     const iterator = numbers[Symbol.iterator]();
@@ -219,5 +221,28 @@ question6D.addEventListener('click', demo6)
 
 
 let demo7 = () => {
+    alert("Refer to console")
+    let set = new Set();
+
+    let john = { name: "John" };
+    let pete = { name: "Pete" };
+    let mary = { name: "Mary" };
+
+    // visits, some users come multiple times
+    set.add(john);
+    set.add(pete);
+    set.add(mary);
+    set.add(john);
+    set.add(mary);
+
+    // set keeps only unique values
+    console.log("set:", set)
+    let map = new Map();
+
+    map.set('1', 'str1');   // a string key
+    map.set(1, 'num1');     // a numeric key
+    map.set(true, 'bool1'); // a boolean key
+
+    console.log("map:", map)
 }
-question7E.addEventListener('click', demo7)
+question7D.addEventListener('click', demo7)
