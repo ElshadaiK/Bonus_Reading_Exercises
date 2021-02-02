@@ -79,12 +79,12 @@ question2PFA.addEventListener('click', function () {
     passingArgument(getName)
 }
 )
-question2FRF.addEventListener('click', function(){returningFunction(5)})
+question2FRF.addEventListener('click', function () { returningFunction(5) })
 
 let explain3 = () => {
     let answer = `<h6>Functions can access global variables, but local (blocked) variables cannot be accessed in a function.
                     Variables created without a declaration keyword (var, let, or const) are always global, even if they are created inside a function.<h6>`
-                    answer3.innerHTML = answer
+    answer3.innerHTML = answer
 }
 let LetCounter = 0
 var VarCounter = 0
@@ -98,9 +98,9 @@ function add() {
     var counter = 0;
     counter += 1;
     return counter;
-  }
-  
-question3D.addEventListener('click', function(){
+}
+
+question3D.addEventListener('click', function () {
     let answer = `<h6>Refer to console<h6>`
     answer3.innerHTML = answer
 
@@ -116,29 +116,59 @@ question3E.addEventListener('click', explain3)
 
 
 let explain4 = () => {
+    let answer = `<h6>Reflection is the ability of a program to manipulate variables, properties, and methods of objects at runtime.
+    Reflect is similar to the Math and JSON objects. All the methods of the Reflect object are static.<h6>`
+    answer4.innerHTML = answer
+
 }
 question4E.addEventListener('click', explain4)
 
 
 let explain5 = () => {
+    let answer = `<h6><h6>`
+    answer5.innerHTML = answer
 }
 question5E.addEventListener('click', explain5)
 
 
 let explain6 = () => {
+    let answer = `<h6><h6>`
+    answer6.innerHTML = answer
 }
 question6E.addEventListener('click', explain6)
 
 
 let explain7 = () => {
+    let answer = `<h6><h6>`
+    answer7.innerHTML = answer
 }
 question7E.addEventListener('click', explain7)
 
 
+class Person {
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+};
 
 let demo4 = () => {
+    let firstName = prompt("First name: ")
+    let lastName = prompt("Last name: ")
+    let args = [firstName, lastName];
+
+    let user = Reflect.construct(
+        Person,
+        args
+    );
+    alert("Refer to console")
+    console.log("user instanceof Person", user instanceof Person);
+    console.log("user.fullName", user.fullName);
 }
-question4E.addEventListener('click', demo4)
+question4D.addEventListener('click', demo4)
 
 
 let demo5 = () => {
